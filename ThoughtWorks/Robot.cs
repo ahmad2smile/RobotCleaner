@@ -5,7 +5,7 @@
         private readonly Position _initialPosition;
         private readonly Room _room;
 
-        private readonly int UnitMove = 1;
+        private const int UnitMove = 1;
 
         public Robot(Position initialPosition, Room room)
         {
@@ -47,7 +47,7 @@
 
                     return new Position()
                     {
-                        Direction = Direction.N,
+                        Direction = currentPosition.Direction,
                         X = currentPosition.X,
                         Y = newMove >= _room.Height ? _room.Height - 1 : newMove
                     };
@@ -56,7 +56,7 @@
 
                     return new Position()
                     {
-                        Direction = Direction.N,
+                        Direction = currentPosition.Direction,
                         X = currentPosition.X,
                         Y = newMove <= 0 ? 0 : newMove
                     };
@@ -65,7 +65,7 @@
 
                     return new Position()
                     {
-                        Direction = Direction.N,
+                        Direction = currentPosition.Direction,
                         X = newMove >= _room.Width ? _room.Width - 1 : newMove,
                         Y = currentPosition.Y
                     };
@@ -74,7 +74,7 @@
 
                     return new Position()
                     {
-                        Direction = Direction.N,
+                        Direction = currentPosition.Direction,
                         X = newMove <= 0 ? 0 : newMove,
                         Y = currentPosition.Y
                     };
