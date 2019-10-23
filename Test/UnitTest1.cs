@@ -13,16 +13,9 @@ namespace Test
         [Test(Description = "Robot follows all the instructions correctly and get to final positions")]
         public void CorrectFinalPosition()
         {
-            var instructions = new Instruction[]
+            var instructions = new[]
             {
                 Instruction.L, Instruction.M, Instruction.L, Instruction.M, Instruction.L, Instruction.M, Instruction.L, Instruction.M, Instruction.M
-            };
-
-            var initialPosition = new Position()
-            {
-                Direction = Direction.N,
-                X = 1,
-                Y = 2
             };
 
             var room = new Room()
@@ -31,9 +24,19 @@ namespace Test
                 Height = 6
             };
 
-            var robot = new Robot(initialPosition, room);
+            var initialPosition = new Position(room)
+            {
+                Direction = Direction.N,
+                X = 1,
+                Y = 2
+            };
+
+
+
+            var robot = new Robot(initialPosition);
             var finalPosition = robot.GetFinalPosition(instructions);
-            var expectedPosition = new Position()
+
+            var expectedPosition = new Position(room)
             {
                 Direction = Direction.N,
                 X = 1,
@@ -48,16 +51,9 @@ namespace Test
         [Test(Description = "Robot does not move when it hits the wall and ignores the instruction")]
         public void IgnoresInvalidMove()
         {
-            var instructions = new Instruction[]
+            var instructions = new[]
             {
                 Instruction.M, Instruction.L, Instruction.M
-            };
-
-            var initialPosition = new Position()
-            {
-                Direction = Direction.N,
-                X = 3,
-                Y = 5
             };
 
             var room = new Room()
@@ -66,9 +62,19 @@ namespace Test
                 Height = 6
             };
 
-            var robot = new Robot(initialPosition, room);
+            var initialPosition = new Position(room)
+            {
+                Direction = Direction.N,
+                X = 3,
+                Y = 5
+            };
+
+
+
+            var robot = new Robot(initialPosition);
             var finalPosition = robot.GetFinalPosition(instructions);
-            var expectedPosition = new Position()
+
+            var expectedPosition = new Position(room)
             {
                 Direction = Direction.W,
                 X = 2,
