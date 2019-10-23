@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThoughtWorks", "ThoughtWorks\ThoughtWorks.csproj", "{78042A9C-16D2-49A1-8C6E-CE7FCB453E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{7383B6A3-89E6-4DBE-A8E2-47032331E698}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78042A9C-16D2-49A1-8C6E-CE7FCB453E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78042A9C-16D2-49A1-8C6E-CE7FCB453E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78042A9C-16D2-49A1-8C6E-CE7FCB453E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78042A9C-16D2-49A1-8C6E-CE7FCB453E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7383B6A3-89E6-4DBE-A8E2-47032331E698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7383B6A3-89E6-4DBE-A8E2-47032331E698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7383B6A3-89E6-4DBE-A8E2-47032331E698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7383B6A3-89E6-4DBE-A8E2-47032331E698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E12EA2B-4C76-493C-B682-7B06081B635F}
+	EndGlobalSection
+EndGlobal
